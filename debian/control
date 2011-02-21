@@ -1,0 +1,10 @@
+Source: libcpaboutcssu
+Section: libs
+Priority: optional
+Maintainer: Mohammad Abu-Garbeyyeh <mohammad7410@gmail.com>
+Build-Depends: debhelper (>= 5), libgtk2.0-dev, libglib2.0-dev, libhildon1-dev, libhildondesktop1-dev, hildon-control-panel-dev
+
+Package: libcpaboutcssu
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, hildon-control-panel (>= 1:2.2.1), dpkg
+Description: Control panel plugin to show the status of the CSSU as well as the version installed.

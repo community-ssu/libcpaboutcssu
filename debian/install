@@ -1,0 +1,4 @@
+data/cpaboutcssu.desktop	usr/share/applications/hildon-control-panel
+data/maemo.org.png		usr/share/pixmaps
+data/maemoorg.png		usr/share/pixmaps
+src/libcpaboutcssu.so		usr/lib/hildon-control-panel

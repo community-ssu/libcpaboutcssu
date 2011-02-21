@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=About Community SSU
+Type=HildonControlPanelPlugin
+Icon=maemoorg
+Categories=general
+X-control-panel-plugin=libcpaboutcssu.so
+X-Text-Domain=osso-applet-aboutcssu
+
