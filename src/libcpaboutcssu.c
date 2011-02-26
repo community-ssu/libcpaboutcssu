@@ -32,7 +32,7 @@ osso_return_t execute(osso_context_t* osso, gpointer user_data, gboolean user_ac
 		gtk_text_buffer_insert_at_cursor (buffer, "\n\nCommunity SSU installed\n", -1);
 		gtk_text_buffer_insert_at_cursor (buffer, "Version: ", -1);
 		gtk_text_buffer_insert_at_cursor (buffer, version, -1);
-		gtk_text_buffer_insert_at_cursor (buffer, "\nThanks to:\nAndrew Flegg\nThomas Perl\nNicolai Hess\nNiels Breet\nAndre Klapper\nChristian Ratzenhofer\n", -1);
+		gtk_text_buffer_insert_at_cursor (buffer, "\n\nThanks to:\nAndrew Flegg\nThomas Perl\nNicolai Hess\nNiels Breet\nAndre Klapper\nChristian Ratzenhofer\n", -1);
 		gtk_text_buffer_insert_at_cursor (buffer, "And everyone who was involved.\n\n ~ Mohammad Abu-Garbeyyeh", -1);
 
 		g_free (version);
