@@ -32,7 +32,7 @@ osso_return_t execute(osso_context_t* osso, gpointer user_data, gboolean user_ac
 		gtk_text_buffer_insert_at_cursor (buffer, "\n\nCommunity SSU installed\n", -1);
 		gtk_text_buffer_insert_at_cursor (buffer, "Version: ", -1);
 		gtk_text_buffer_insert_at_cursor (buffer, version, -1);
-		gtk_text_buffer_insert_at_cursor (buffer, "\n\nThanks to:\nAndrew Flegg\nThomas Perl\nNicolai Hess\nNiels Breet\nAndre Klapper\nChristian Ratzenhofer\n", -1);
+		gtk_text_buffer_insert_at_cursor (buffer, "\n\nThanks to:\nAndrew Flegg\nThomas Perl\nNicolai Hess\nNiels Breet\nAndre Klapper\nChristian Ratzenhofer\nFaheem Pervez\nRoman Morav‌čík\nTomasz Pieniążek\nAndrew Zhilin\n", -1);
 		gtk_text_buffer_insert_at_cursor (buffer, "And everyone who was involved.\n\n ~ Mohammad Abu-Garbeyyeh", -1);
 
 		g_free (version);
@@ -63,17 +63,12 @@ osso_return_t execute(osso_context_t* osso, gpointer user_data, gboolean user_ac
 	gtk_window_set_transient_for (GTK_WINDOW(dialog), GTK_WINDOW(user_data));
 
 	GdkGeometry geometry;
-	if(gdk_screen_get_width(gdk_display_get_default_screen(gdk_display_get_default())) < 800) 
-	{
-
+	if (gdk_screen_get_width(gdk_display_get_default_screen(gdk_display_get_default())) < 800) 
 	    geometry.min_height = 500; 
-	    geometry.min_width = 480; 
-	} 
 	else 
-	{ 
-	geometry.min_height = 360;
+	    geometry.min_height = 360;
+	
 	geometry.min_width = 480; 
-	} 
 	gtk_window_set_geometry_hints (GTK_WINDOW(dialog), 
 				       dialog, 
 				       &geometry, 
