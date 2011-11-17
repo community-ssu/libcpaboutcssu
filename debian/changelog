@@ -1,3 +1,9 @@
+libcpaboutcssu (1.0+0cssu3.1) unstable; urgency=low
+
+  * Fixed build depends for autobuilder.
+
+ -- Christian Ratzenhofer <christian_ratzenhofer@yahoo.de>  Wed, 16 Nov 2011 18:11:10 +0100
+
 libcpaboutcssu (1.0+0cssu3) unstable; urgency=low
 
   * Added new names, cleaned up code.
