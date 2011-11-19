@@ -35,6 +35,7 @@ osso_return_t execute(osso_context_t* osso, gpointer user_data, gboolean user_ac
 		const char *flavor;
 		gchar *p = NULL;
 		if ((p = strchr(version, 'S')) != NULL) {
+			*p = '\0';
 			cleaned = g_strdup_printf("%s%s", version, p + 1);
 			flavor = "Stable";
 		} else if ((p = strchr(version, 'T')) != NULL) {
@@ -48,7 +49,7 @@ osso_return_t execute(osso_context_t* osso, gpointer user_data, gboolean user_ac
 		gtk_text_buffer_insert_at_cursor (buffer, cleaned, -1);
 		gtk_text_buffer_insert_at_cursor (buffer, "\nFlavor: ", -1);
 		gtk_text_buffer_insert_at_cursor (buffer, flavor, -1);
-		gtk_text_buffer_insert_at_cursor (buffer, "\n\nThanks to:\nAndrew Flegg\nThomas Perl\nNicolai Hess\nNiels Breet\nAndre Klapper\nChristian Ratzenhofer\nFaheem Pervez\nRoman Morav‌čík\nTomasz Pieniążek\nAndrew Zhilin\nIvaylo Dimitrov\nPali Rohár\n", -1);
+		gtk_text_buffer_insert_at_cursor (buffer, "\n\nThanks to:\nAndrew Flegg\nThomas Perl\nNicolai Hess\nNiels Breet\nAndre Klapper\nChristian Ratzenhofer\nFaheem Pervez\nRoman Morav‌čík\nTomasz Pieniążek\nAndrew Zhilin\nIvaylo Dimitrov\nPali Rohár\nJavier S. Pedro", -1);
 		gtk_text_buffer_insert_at_cursor (buffer, "And everyone who was involved.\n\n ~ Mohammad Abu-Garbeyyeh", -1);
 
 		g_free (version);
