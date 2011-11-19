@@ -1,3 +1,9 @@
+libcpaboutcssu (1.0+0cssu4) unstable; urgency=low
+
+  * Show flavor in dialog, added more names.
+
+ -- Mohammad Abu-Garbeyyeh <mohammad7410@gmail.com>  Sat, 19 Nov 2011 18:47:23 +0200
+
 libcpaboutcssu (1.0+0cssu3.1) unstable; urgency=low
 
   * Fixed build depends for autobuilder.
