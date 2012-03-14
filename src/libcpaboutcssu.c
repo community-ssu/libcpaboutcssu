@@ -58,7 +58,7 @@ osso_return_t execute(osso_context_t* osso, gpointer user_data, gboolean user_ac
 	gtk_text_view_set_cursor_visible (GTK_TEXT_VIEW(text_view), FALSE);
 	GtkTextIter iter;
 	gtk_text_buffer_get_start_iter (buffer, &iter);
-	
+
 	if (image)
 	{
 		gtk_text_buffer_insert_pixbuf(buffer, &iter, image);
@@ -78,15 +78,15 @@ osso_return_t execute(osso_context_t* osso, gpointer user_data, gboolean user_ac
 
 	GdkGeometry geometry;
 	if (gdk_screen_get_width(gdk_display_get_default_screen(gdk_display_get_default())) < 800) 
-	    geometry.min_height = 500; 
-	else 
+	    geometry.min_height = 500;
+	else
 	    geometry.min_height = 360;
-	
-	geometry.min_width = 480; 
-	gtk_window_set_geometry_hints (GTK_WINDOW(dialog), 
-				       dialog, 
-				       &geometry, 
-				       GDK_HINT_MIN_SIZE); 
+
+	geometry.min_width = 480;
+	gtk_window_set_geometry_hints (GTK_WINDOW(dialog),
+				       dialog,
+				       &geometry,
+				       GDK_HINT_MIN_SIZE);
 
 	gtk_widget_show_all (dialog);
 	gtk_dialog_run (GTK_DIALOG(dialog));
