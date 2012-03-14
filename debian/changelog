@@ -1,3 +1,9 @@
+libcpaboutcssu (1.0+0cssu4.1) unstable; urgency=low
+
+  * Do not edit version string.
+
+ -- Christian Ratzenhofer <christian_ratzenhofer@yahoo.de>  Wed, 14 Mar 2012 14:46:23 +0100
+
 libcpaboutcssu (1.0+0cssu4) unstable; urgency=low
 
   * Show flavor in dialog, added more names.

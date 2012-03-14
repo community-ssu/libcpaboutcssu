@@ -21,7 +21,6 @@ osso_return_t execute(osso_context_t* osso, gpointer user_data, gboolean user_ac
 
 	if (g_file_test (CSSU_LIST_FILE, G_FILE_TEST_EXISTS)) {
 		gchar *version = NULL;
-		gchar *cleaned = NULL;
 		GError *err = NULL;
 
 		if (!g_spawn_command_line_sync ("sh -c \"dpkg -l mp-fremantle-community-pr | tail -1 | awk '{print $3}'\"", &version, NULL, NULL /* Always 0 :\ */, &err))
@@ -35,25 +34,22 @@ osso_return_t execute(osso_context_t* osso, gpointer user_data, gboolean user_ac
 		const char *flavor;
 		gchar *p = NULL;
 		if ((p = strchr(version, 'S')) != NULL) {
-			*p = '\0';
-			cleaned = g_strdup_printf("%s%s", version, p + 1);
 			flavor = "Stable";
 		} else if ((p = strchr(version, 'T')) != NULL) {
-			*p = '\0';
-			cleaned = g_strdup_printf("%s%s", version, p + 1);
 			flavor = "Testing";
+		} else {
+			flavor = "Unknown";
 		}
 
 		gtk_text_buffer_insert_at_cursor (buffer, "\n\nCommunity SSU installed\n", -1);
 		gtk_text_buffer_insert_at_cursor (buffer, "Version: ", -1);
-		gtk_text_buffer_insert_at_cursor (buffer, cleaned, -1);
+		gtk_text_buffer_insert_at_cursor (buffer, version, -1);
 		gtk_text_buffer_insert_at_cursor (buffer, "\nFlavor: ", -1);
 		gtk_text_buffer_insert_at_cursor (buffer, flavor, -1);
 		gtk_text_buffer_insert_at_cursor (buffer, "\n\nThanks to:\nAndrew Flegg\nThomas Perl\nNicolai Hess\nNiels Breet\nAndre Klapper\nChristian Ratzenhofer\nFaheem Pervez\nRoman Morav‌čík\nTomasz Pieniążek\nAndrew Zhilin\nIvaylo Dimitrov\nPali Rohár\nJavier S. Pedro\n", -1);
 		gtk_text_buffer_insert_at_cursor (buffer, "And everyone who was involved.\n\n ~ Mohammad Abu-Garbeyyeh", -1);
 
 		g_free (version);
-		g_free (cleaned);
 	} else {
 		gtk_text_buffer_insert_at_cursor (buffer, "\nCommunity SSU meta package not installed", -1);
 	}
