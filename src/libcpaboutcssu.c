@@ -23,7 +23,7 @@ osso_return_t execute(osso_context_t* osso, gpointer user_data, gboolean user_ac
 		gchar *version = NULL;
 		GError *err = NULL;
 
-		if (!g_spawn_command_line_sync ("sh -c \"dpkg -l mp-fremantle-community-pr | tail -1 | awk '{print $3}'\"", &version, NULL, NULL /* Always 0 :\ */, &err))
+		if (!g_spawn_command_line_sync ("dpkg-query -W -f ${Version} mp-fremantle-community-pr", &version, NULL, NULL /* Always 0 :\ */, &err))
 		{
 			g_printerr ("Spawning dpkg failed: %s\n", err->message);
 			version = g_strdup ("Version could not be determined");
