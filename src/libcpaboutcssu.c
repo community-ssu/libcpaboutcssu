@@ -46,7 +46,7 @@ osso_return_t execute(osso_context_t* osso, gpointer user_data, gboolean user_ac
 		gtk_text_buffer_insert_at_cursor (buffer, version, -1);
 		gtk_text_buffer_insert_at_cursor (buffer, "\nFlavor: ", -1);
 		gtk_text_buffer_insert_at_cursor (buffer, flavor, -1);
-		gtk_text_buffer_insert_at_cursor (buffer, "\n\nThanks to:\nAndrew Flegg\nThomas Perl\nNicolai Hess\nNiels Breet\nAndre Klapper\nChristian Ratzenhofer\nFaheem Pervez\nRoman Morav‌čík\nTomasz Pieniążek\nAndrew Zhilin\nIvaylo Dimitrov\nPali Rohár\nJavier S. Pedro\n", -1);
+		gtk_text_buffer_insert_at_cursor (buffer, "\n\nThanks to:\nAndrew Flegg\nThomas Perl\nNicolai Hess\nNiels Breet\nAndre Klapper\nChristian Ratzenhofer\nFaheem Pervez\nRoman Morav‌čík\nTomasz Pieniążek\nAndrew Zhilin\nIvaylo Dimitrov\nPali Rohár\nJavier S. Pedro\nLudek Finstrle\n", -1);
 		gtk_text_buffer_insert_at_cursor (buffer, "And everyone who was involved.\n\n ~ Mohammad Abu-Garbeyyeh", -1);
 
 		g_free (version);
