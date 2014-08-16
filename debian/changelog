@@ -1,3 +1,9 @@
+libcpaboutcssu (1.0+0cssu5) unstable; urgency=low
+
+  * Use dpkg-query instead of the ugly shell hack, added luf.
+
+ -- Christian Ratzenhofer <christian.ratzenhofer@cdnm.at>  Wed,  2 Jan 2013 09:10:47 +0100
+
 libcpaboutcssu (1.0+0cssu4.1) unstable; urgency=low
 
   * Do not edit version string.
